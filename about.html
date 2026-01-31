@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us & Register - Side by Side</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: url('wedding-caterers-sydney-e1629788409535.jpg') no-repeat center center/cover;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .navbar {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #e91e63;
+    }
+
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      height: 80vh;
+      margin: 60px auto 0;
+      z-index: 1;
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+
+    .left, .right {
+      width: 50%;
+      padding: 40px;
+      color: white;
+      overflow-y: auto;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left h1 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .left h1::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: white;
+      margin: 10px 0;
+    }
+
+    .left p {
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .highlight {
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .right {
+      background: transparent;
+      color: #e8dbdb;
+      border-radius: 0 20px 20px 0;
+    }
+
+    .right h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 13px;
+      color: #eae3e3;
+    }
+
+    form label {
+      display: block;
+      margin: 12px 0 6px;
+      font-size: 10px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bae589;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #c2515a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #700914;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+      }
+
+      .left, .right {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .right {
+        border-radius: 0 0 20px 20px;
+      }
+
+      .left h1 {
+        font-size: 20px;
+      }
+    }
+
+    /* Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: #e91e63;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">Shadow <span style="color:#e0e0e0;">Parties</span></div>
+    <ul class="nav-links">
+      <li><a href="indexx.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="overlay"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Left: About Us -->
+    <div class="left">
+      <h1>ABOUT US</h1>
+      <p>
+        "About….<br><br>
+        We are a full-service, <strong>professional event planning team</strong> dedicated to crafting unforgettable memories for every occasion. (Weddings, Corporate Events, Birthdays, Anniversary Parties, and every celebration!)<br><br>
+        Recently, we started this Event Planning Team, and we are excited to craft your events with your own styles. We take care of every aspect, from the first concept to the last toast, so you can be totally present and feel like a guest at your own event."
+      </p>
+      <div class="highlight">LET'S CELEBRATE YOUR EVENTS WITH SP EVENT PLANNERS</div>
+    </div>
+
+    <!-- Right: Register Form -->
+    <div class="right">
+      <h2>Register Now</h2>
+      <form action="register.php" method="post">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shadow Parties Events. All rights reserved.</p>
+    <a href="https://www.instagram.com/" target="_blank">Follow us on Instagram</a>
+  </footer>
+
+</body>
+</html>

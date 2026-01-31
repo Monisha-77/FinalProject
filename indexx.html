@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shadow Parties Events</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for icons (optional but nice) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- FullCalendar Styles -->
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+
+  <style>
+  /* Top-right login buttons below navbar */
+  .login-top-buttons {
+    position: absolute;
+    top: 80px; /* below navbar */
+    right: 20px;
+    z-index: 999;
+  }
+
+  .login-top-buttons a {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s;
+  }
+
+  .login-top-buttons a:hover {
+    background-color: #e91e63;
+  }
+
+  @media (max-width: 768px) {
+    .login-top-buttons {
+      top: 120px;
+      right: 10px;
+    }
+
+    .login-top-buttons a {
+      display: block;
+      margin: 6px 0;
+    
+      
+    }
+  }
+</style>
+<!-- ✅ Separate FullCalendar Enhancement Style Block -->
+  <style>
+    /* 🌟 Enhanced Calendar Styling */
+    #calendar {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .fc-toolbar-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .fc-button {
+      background-color: #e91e63 !important;
+      border: none !important;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 6px !important;
+      color: white !important;
+    }
+
+    .fc-button:hover {
+      background-color: #d81b60 !important;
+    }
+
+    .fc-daygrid-day-number {
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    .fc-day-today {
+      background: #fff4f7 !important;
+      border: 1px solid #f06292 !important;
+    }
+
+    .fc-event {
+      background-color: #4caf50 !important;
+      border: none;
+      padding: 4px 6px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: white;
+      text-align: center;
+    }
+
+    .fc-event:hover {
+      background-color: #388e3c !important;
+    }
+
+    .fc-col-header-cell {
+      background: #fafafa;
+      padding: 10px 0;
+      color: #555;
+      font-weight: 500;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .fc-scrollgrid {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .fc-daygrid-day:hover {
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      #calendar {
+        padding: 15px;
+      }
+      .fc-toolbar-title {
+        font-size: 18px;
+      }
+      .fc-button {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- ✅ Login Buttons Floating Top Right -->
+  <div class="login-top-buttons">
+    <a href="admin_login.php"><i class="fas fa-user-shield"></i> Admin Login</a>
+    <a href="customer_login.php"><i class="fas fa-user"></i> Customer Login</a>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Shadow Parties</div>
+      <ul class="nav-links">
+        <li><a href="indexx.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Fullscreen Hero Section -->
+  <section class="fullscreen-hero">
+    <div class="fullscreen-content">
+      <h1>Welcome to Shadow Parties!</h1>
+      <p>Where your dream events come to life</p>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <p class="about-description">
+      At <strong>Shadow Parties Events</strong>, we believe every event should be unforgettable. Founded with the vision to create magical, memorable moments, our team is passionate about bringing your unique vision to life—no matter the size or style...
+    </p>
+
+    <p class="about-description">
+      With over <strong>5 years of experience</strong> in the event industry, we've successfully organized everything from intimate gatherings to large-scale productions...
+    </p>
+
+    <p class="about-description">
+      Our full-service approach includes concept design, venue selection, décor styling, entertainment, catering coordination, guest management, and on-day execution.
+    </p>
+
+    <p class="about-description">
+      At Shadow Parties, it's not just about events. It's about people. It's about passion. It's about creating moments that last a lifetime.
+    </p>
+
+    <div class="about-images">
+      <img src="https://i5.walmartimages.com/seo/SFBOSF-pink-birthday-Party-Decoration-Kits_dcdf7ca5-4f5d-4916-b7a3-583408674426.29f43545c92dde2c8b8994574b81e3bb.jpeg" alt="Event 1">
+      <img src="https://i.pinimg.com/736x/05/68/c4/0568c426e0d964e7c324ba64ffd98100.jpg" alt="Event 2">
+      <img src="https://ambrosiaeventsmke.com/wp-content/uploads/2022/01/Linens-1.jpg" alt="Event 3">
+    </div>
+  </section>
+<div id='calendar' style="max-width: 800px; margin: 50px auto; background: white; padding: 20px; border-radius: 10px;"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      height: 500,
+      events: [
+        {
+          title: 'Wedding Booking',
+          start: '2025-08-10'
+        },
+        {
+          title: 'Birthday Bash',
+          start: '2025-08-17'
+        },
+        {
+          title: 'Haldi Event',
+          start: '2025-07-29'
+        },
+        {
+          title: 'Corporate Meet',
+          start: '2025-08-25'
+        }
+      ]
+    });
+    calendar.render();
+  });
+</script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shadow Parties Events. All rights reserved.</p>
+    <a href="https://www.instagram.com/" target="_blank">Follow us on Instagram</a>
+  </footer>
+
+</body>
+</html>

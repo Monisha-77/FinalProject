@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shadow Parties Event Planners</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: url('shadow.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      color: #ffffff;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #e91e63;
+    }
+
+    /* Hero Header Section */
+    .hero {
+      text-align: center;
+      color: #fff;
+      padding: 60px 20px 40px;
+    }
+
+    .bouncing-text {
+      display: inline-block;
+      font-size: 2.8em;
+      font-weight: bold;
+      animation: bounce 2s;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 60px 40px;
+      backdrop-filter: blur(2px);
+    }
+
+    .service-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 2s forwards;
+    }
+
+    .service-section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-image {
+      flex: 1 1 40%;
+    }
+
+    .service-image img {
+      width: 75%;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-sizing: content-box;
+    }
+
+    .service-description {
+      background-color: rgb(183, 175, 175);
+      flex: 1 1 25%;
+      padding: 10px;
+      border-radius: 15px;
+      width: 70%;
+      margin: 8%;
+      overflow: hidden;
+      display: block;
+    }
+
+    .service-description h2 {
+      font-size: 3ch;
+      color: #8e8905;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .service-description p {
+      font-size: 1em;
+      color: #474801;
+      line-height: 1.7em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .service-section {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+    /* Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: #e91e63;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">Shadow <span style="color:#e0e0e0;">Parties</span></div>
+    <ul class="nav-links">
+       <li><a href="indexx.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      
+    </ul>  
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="bouncing-text">Celebrate Life’s Special Moments with Us</div>
+    <p>Turning Ordinary Days into Extraordinary Memories</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="service-section">
+      <div class="service-image">
+        <img src="aniversary.jpg" alt="Anniversary Celebration">
+      </div>
+      <div class="service-description">
+        <h2>Anniversary Celebrations</h2>
+        <p>Whether it's your first year or fiftieth, we transform your special milestone into an unforgettable celebration filled with personalized details, romantic ambiance, and cherished moments.</p>
+      </div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-image">
+        <img src="genderreveal.jpg" alt="Gender Reveal Party">
+      </div>
+      <div class="service-description">
+        <h2>Gender Reveal</h2>
+        <p>We specialize in creative, Instagram-worthy reveals—from confetti cannons to dramatic balloon drops—that will have your guests cheering. Every detail is designed to make your big announcement magical.</p>
+      </div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-image">
+        <img src="birthday.jpg" alt="Birthday Party">
+      </div>
+      <div class="service-description">
+        <h2>Birthday Parties</h2>
+        <p>Whether it's your child's first smash cake or a milestone 50th, we throw parties that turn 'Happy Birthday' into 'Unbelievable Birthday!'</p>
+      </div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-image">
+        <img src="R (1).jpg" alt="Corporate Event">
+      </div>
+      <div class="service-description">
+        <h2>Corporate Events</h2>
+        <p>Impress clients and reward your team with seamless corporate events that mean business. From product launches to holiday parties, we deliver professional yet engaging experiences.</p>
+      </div>
+    </div>
+
+    <div class="service-section">
+      <div class="service-image">
+        <img src="OIP (1).jpg" alt="Mehendi Function">
+      </div>
+      <div class="service-description">
+        <h2>Mehendi Functions</h2>
+        <p>Celebrate love's vibrant traditions with a mehndi that dazzles! Our expert planners blend rich cultural elements with modern flair—think floral mandaps, dhol performances, and hennas that become art.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shadow Parties Events. All rights reserved.</p>
+    <a href="https://www.instagram.com/" target="_blank">Follow us on Instagram</a>
+  </footer>
+
+</body>
+</html>

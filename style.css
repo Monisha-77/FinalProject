@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #e91e63;
+}
+
+/* Fullscreen Hero Section */
+.fullscreen-hero {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXZlbnQlMjBwbGFubmVyfGVufDB8fDB8fHww');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.fullscreen-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fullscreen-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.fullscreen-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.fullscreen-content p {
+  font-size: 1.5rem;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.about-us h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #1f1f1f;
+}
+
+.about-us p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #333;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-images img {
+  width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: #e91e63;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
